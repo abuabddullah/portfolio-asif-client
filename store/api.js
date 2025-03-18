@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // Using dummy data instead of actual API calls for design only
 export const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/api/v1",
+    baseUrl: "https://asif-portfolio-server.vercel.app/api/v1",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().auth.token;
       if (token) {
