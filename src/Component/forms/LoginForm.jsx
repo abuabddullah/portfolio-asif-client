@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { login } from "../../../store/slices/authSlice";
 import EmailInput from "../reusableInputTags/EmailInput";
 import PasswordInput from "../reusableInputTags/PasswordInput";
-import { useDispatch } from "react-redux";
-import { login } from "../../../store/slices/authSlice";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const LoginForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("http://localhost:5000/api/v1/auth/login", {
+      const response = await fetch("https://asif-portfolio-server.vercel.app/api/v1/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

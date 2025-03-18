@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { login } from "../../../store/slices/authSlice.js";
 import EmailInput from "../reusableInputTags/EmailInput.jsx";
 import PasswordInput from "../reusableInputTags/PasswordInput.jsx";
 import TextInput from "../reusableInputTags/TextInput";
-import { login } from "../../../store/slices/authSlice.js";
-import { useDispatch } from "react-redux";
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const RegisterForm = () => {
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/auth/register",
+        "https://asif-portfolio-server.vercel.app/api/v1/auth/register",
         {
           method: "POST",
           headers: {
