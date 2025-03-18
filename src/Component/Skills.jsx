@@ -1,4 +1,3 @@
-import Lottie from "lottie-react";
 import css from "../assets/icons/css.svg";
 import expressjs from "../assets/icons/expressjs.svg";
 import firebase from "../assets/icons/firebase.svg";
@@ -6,7 +5,7 @@ import html from "../assets/icons/html.svg";
 import js from "../assets/icons/js.svg";
 import mongoDB from "../assets/icons/mongoDB.svg";
 import nextjs from "../assets/icons/nextjs.webp";
-import nodeJs from "../assets/icons/nodeJs.svg";
+import nodeJs from "../assets/icons/nodeJS.svg";
 import react from "../assets/icons/react.svg";
 import redux from "../assets/icons/redux.svg";
 import tailwind from "../assets/icons/tailwind.svg";

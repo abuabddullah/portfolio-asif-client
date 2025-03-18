@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import acmeai from "./../assets/acmeai.png";
+import jmc from "./../assets/jmc.png";
+import vc from "./../assets/vc.png";
 
 const experiences = [
   {
@@ -8,7 +11,7 @@ const experiences = [
     role: "Alert Validator",
     duration: "Dec 2024 – Ongoing",
     shortDuration: "Dec 25 - Ongoing",
-    image: "/src/assets/acmeai.png",
+    image: acmeai,
     tasks: [
       "Validated alert accuracy for AI systems",
       `Collaborated with teams to
@@ -25,7 +28,7 @@ const experiences = [
     role: "Fullstack Developer Intern",
     duration: "August 2024 – October 2024 (2 months)",
     shortDuration: "Aug 24 - Oct 24",
-    image: "/src/assets/jmc.png",
+    image: jmc,
     tasks: [
       "Build dynamic UI components with React, ensuring responsiveness and seamless API integration.",
       "Create efficient RESTful or GraphQL APIs using Node.js, Express, and MongoDB.",
@@ -38,7 +41,7 @@ const experiences = [
     role: "Management Trainee Officer",
     duration: "July 2019 – January 2020 (6 months)",
     shortDuration: "Jul 19 - Jan 20",
-    image: "/src/assets/vc.png",
+    image: vc,
     tasks: [
       "Analyze and optimize dyeing processes to improve efficiency, reduce waste, and enhance color consistency.",
       "Monitor and ensure the quality of dyed fabrics by conducting tests on color fastness, shade matching, and fabric integrity.",
