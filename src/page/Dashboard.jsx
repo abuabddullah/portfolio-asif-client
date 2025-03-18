@@ -1,6 +1,6 @@
 import { CgLogOut } from "react-icons/cg";
 import { FiUsers } from "react-icons/fi";
-import { GiSkills } from "react-icons/gi";
+import { GiPush, GiSkills } from "react-icons/gi";
 import { LuLayoutDashboard, LuPackage } from "react-icons/lu";
 import { RiMenu2Fill } from "react-icons/ri";
 
@@ -11,15 +11,15 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import { logout, selectCurrentUser } from "../../store/slices/authSlice";
 
 export const Dashboard = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const user = useSelector(selectCurrentUser);
-  console.log("🚀 ~ Dashboard ~ user:", user)
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
   let navigation = [
     { name: "Dashboard", href: "/dashboard", icon: LuLayoutDashboard },
     { name: "Projects", href: "/dashboard/projects", icon: LuPackage },
     { name: "Skills", href: "/dashboard/skills", icon: GiSkills },
+    { name: "Experience", href: "/dashboard/experience", icon: GiPush },
     { name: "Feedbacks", href: "/dashboard/feedback", icon: FiUsers },
     {
       name: "Settings",
@@ -76,8 +76,10 @@ export const Dashboard = () => {
               <Link to="/">Back</Link>
             </button>
             <button className="flex w-full items-center px-2 py-2 text-sm font-medium text-gray-600 rounded-md hover:bg-gray-50 hover:text-gray-900">
-              <IoLogOutSharp  className="mr-3 h-5 w-5" />
-              <Link to="/" onClick={()=>dispatch(logout())}>Logout</Link>
+              <IoLogOutSharp className="mr-3 h-5 w-5" />
+              <Link to="/" onClick={() => dispatch(logout())}>
+                Logout
+              </Link>
             </button>
           </div>
         </div>

@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useGetAllExperiencesQuery } from "../../store/api";
 import acmeai from "./../assets/acmeai.png";
 import jmc from "./../assets/jmc.png";
 import vc from "./../assets/vc.png";
 
-const experiences = [
+const experiencesZZZ = [
   {
     id: 1,
     company: "Acme AI Ltd",
@@ -143,9 +144,18 @@ export const ExperienceCard = ({ exp, index }) => {
 };
 
 export const ExperienceSection = () => {
+  const { data: experiences, isLoading } = useGetAllExperiencesQuery();
+  console.log("🚀 ~ ExperienceSection ~ experiences:", experiences)
+  const [localExperience, setLocalExperience] = useState(experiencesZZZ || []);
+
+  useEffect(() => {
+    if (experiences) {
+      setLocalExperience(experiences);
+    }
+  }, [experiences]);
   return (
     <div className="flex flex-col gap-10 my-10">
-      {experiences.map((exp, index) => (
+      {localExperience.map((exp, index) => (
         <ExperienceCard key={exp.id} exp={exp} index={index} />
       ))}
     </div>

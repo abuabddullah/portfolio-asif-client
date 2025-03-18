@@ -21,7 +21,7 @@ const LoginForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("https://asif-portfolio-server.vercel.app/api/v1/auth/login", {
+      const response = await fetch("http://localhost:5000/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +37,6 @@ const LoginForm = () => {
       }
 
       const result = await response.json();
-      console.log(result);
       dispatch(login(result));
 
       navigate("/dashboard"); // Redirect to the dashboard or desired route

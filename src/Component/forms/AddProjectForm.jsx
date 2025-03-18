@@ -15,7 +15,6 @@ const AddProjectForm = () => {
   const [addProject, { isLoading }] = useAddProjectMutation();
 
   const onSubmit = async (data) => {
-    console.log("🚀 ~ onSubmit ~ data:", data)
     try {
       const formattedData = {
         ...data,

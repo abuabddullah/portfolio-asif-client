@@ -6,16 +6,13 @@ import { Navigate } from "react-router-dom";
 
 
 const ProtectedRoute = ({ children, role }) => {
-  console.log("🚀 ~ ProtectedRoute ~ role:", role)
   const token = useSelector(selectUserToken);
-  console.log("🚀 ~ ProtectedRoute ~ token:", token)
 
   let decodedUser;
 
   if (token) {
     decodedUser = verifyToken(token);
 }
-console.log("🚀 ~ ProtectedRoute ~ decodedUser:", decodedUser)
 
   const dispatch = useDispatch();
 
