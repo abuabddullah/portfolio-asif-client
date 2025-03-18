@@ -1,0 +1,136 @@
+.body {
+  background: radial-gradient(circle, #000, #0c1e3f);
+  height: 100vh;
+}
+.wrapper span {
+  position: absolute;
+  animation: animate 2s linear infinite;
+}
+
+.wrapper span .i {
+  color: #facc15;
+  font-size: 18px;
+}
+.wrapper span:nth-child(1) {
+  left: 60px;
+  /* animation-delay:  0.6s; */
+  top: 5%;
+}
+.wrapper span:nth-child(2) {
+  left: 10%;
+  animation-delay: 1s;
+  top: 30%;
+}
+.wrapper span:nth-child(3) {
+  left: 30%;
+  animation-delay: 4s;
+  top: 20%;
+}
+.wrapper span:nth-child(4) {
+  left: 26px;
+  animation-delay: 3s;
+  top: 65%;
+}
+.wrapper span:nth-child(5) {
+  left: 40%;
+  animation-delay: 0.1s;
+  top: 85%;
+}
+.wrapper span:nth-child(6) {
+  left: 50%;
+  animation-delay: 4.5s;
+  top: 45%;
+}
+.wrapper span:nth-child(7) {
+  left: 70%;
+  animation-delay: 3s;
+  top: 23%;
+}
+.wrapper span:nth-child(8) {
+  left: 55%;
+  animation-delay: 3.5s;
+  top: 12%;
+}
+.wrapper span:nth-child(9) {
+  left: 90%;
+  animation-delay: 7s;
+  top: 75%;
+}
+.wrapper span:nth-child(10) {
+  left: 95%;
+  animation-delay: 6s;
+  top: 14%;
+}
+.box-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 1;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    /* transform: translate(-100vh, 100vw); */
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wrapper span:nth-child(1) {
+    left: 80%;
+    /* animation-delay:  0.6s; */
+    top: 5%;
+  }
+  .wrapper span:nth-child(2) {
+    left: 10%;
+    animation-delay: 1s;
+    top: 20%;
+  }
+  .wrapper span:nth-child(3) {
+    left: 30%;
+    animation-delay: 4s;
+    top: 10%;
+  }
+  .wrapper span:nth-child(4) {
+    left: 26px;
+    animation-delay: 3s;
+    top: 45%;
+  }
+  .wrapper span:nth-child(5) {
+    left: 50%;
+    animation-delay: 0.1s;
+    top: 80%;
+  }
+  .wrapper span:nth-child(6) {
+    left: 70%;
+    animation-delay: 4.5s;
+    top: 50%;
+  }
+  .wrapper span:nth-child(7) {
+    left: 90%;
+    animation-delay: 3s;
+    top: 53%;
+  }
+  .wrapper span:nth-child(8) {
+    left: 70%;
+    animation-delay: 3.5s;
+    top: 10%;
+  }
+  .wrapper span:nth-child(9) {
+    left: 90%;
+    animation-delay: 7s;
+    top: 75%;
+  }
+  .wrapper span:nth-child(10) {
+    left: 95%;
+    animation-delay: 6s;
+    top: 14%;
+  }
+}

@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.animateSkillImage{
+    animation: animateImage 2s linear infinite ;
+    margin-top: -10px;
+}
+
+
+
+@keyframes animateImage {
+    0%  {
+        transform : translateY(0px)
+    }
+    50%  {
+        transform : translateY(10px)
+    }
+    100%{
+        transform : translateY(0px)
+
+    }
+    
+}
+
+
+
+
+
+.html{
+    animation: htmlanimate 5s linear  infinite;
+    position: absolute;
+    transform: scale(0.1)  translate(-50% , -50%);
+    top: 48%;
+    left: 47%;
+
+}
+.css{
+    animation: cssanimate 5s linear  infinite;
+    position: absolute;
+    transform: scale(0.1)  translate(-50% , -50%);
+    top: 48%;
+    left: 50%;
+
+}
+
+
+@keyframes htmlanimate{
+    0%{
+        transform: scale(0.1)  translate(-50% , -50%);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+
+    }
+   
+    50%{
+        transform: scale(1)  translate(0% , 0%);
+        top: 0%;
+        left: 0%;
+    }
+    100%{
+        transform: scale(0.1);
+    }
+}
+
+@keyframes cssanimate{
+    0%{
+        transform: scale(0.1)  translate(-50% , -50%);
+        top: 48%;
+        left: 50%;
+        position: absolute;
+
+    }
+   
+    50%{
+        transform: scale(1)  translate(0% , 0%);
+        top: 0%;
+        left: 33%;
+    }
+    100%{
+        transform: scale(0.1);
+    }
+}
