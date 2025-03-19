@@ -46,9 +46,9 @@ const Nav = () => {
     >
       <div className="navbar px-20 justify-evenly lg:max-w-[1800px] w-full mx-auto hidden lg:flex bg-transparent ">
         <div className="flex-1">
-          <a href="#home">
+          <HashLink smooth to="#home">
             <img className="w-40 h-10" src={logo} alt="" />
-          </a>
+          </HashLink>
         </div>
 
         <div className="flex-none">
@@ -58,6 +58,7 @@ const Nav = () => {
               { href: "#Skills", text: "Skills" },
               { href: "#experience", text: "Experience" },
               { href: "#Projects", text: "Projects" },
+              { href: "#blogs", text: "Blogs" },
               { href: "#complements", text: "Complements" },
               { href: "#Education", text: "Education" },
               { href: "#Contact", text: "Contact" },

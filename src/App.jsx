@@ -10,6 +10,7 @@ import Projects from "./Component/Projects";
 import Skills from "./Component/Skills";
 import StarryBackground from "./Component/StarryBackground";
 import Complements from "./Component/Complements";
+import Blogs from "./Component/Blogs";
 
 function App() {
   const lenis = useLenis(({ scroll }) => {
@@ -28,6 +29,7 @@ function App() {
             <Skills />
             <Experience />
             <Projects />
+            <Blogs />
             <Complements />
             <Education />
             <Footer />

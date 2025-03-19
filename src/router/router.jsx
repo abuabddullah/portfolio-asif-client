@@ -6,6 +6,8 @@ import DashFeedback from "../Component/dashboard/DashFeedback";
 import DashHome from "../Component/dashboard/DashHome";
 import DashProjects from "../Component/dashboard/DashProjects";
 import DashSkills from "../Component/dashboard/DashSkills";
+import BlogEditor from "../Component/forms/BlogEditor";
+import UpdateBlog from "../Component/forms/UpdateBlog";
 import UpdateExperiences from "../Component/forms/UpdateExperiences";
 import UpdateProjects from "../Component/forms/UpdateProjects";
 import UpdateSkills from "../Component/forms/UpdateSkills";
@@ -14,7 +16,7 @@ import ProtectedRoute from "../Component/shared/ProtectedRoute";
 import { Dashboard } from "../page/Dashboard";
 import Login from "../page/Login";
 import Register from "../page/Register";
-import BlogEditor from "../Component/forms/BlogEditor";
+import BlogDetails from "../Component/blogs/BlogDetails";
 
 export const router = createBrowserRouter([
     {
@@ -24,6 +26,10 @@ export const router = createBrowserRouter([
     {
       path:"/projects/:id",
       element:<ProjectDetails/>
+    },
+    {
+      path:"/blogs/:id",
+      element:<BlogDetails/>
     },
     {
       path: "/login",
@@ -76,6 +82,10 @@ export const router = createBrowserRouter([
         {
           path: "/dashboard/blog-editor",
           element: <BlogEditor />,
+        },
+        {
+          path: "/dashboard/blogs-update/:id",
+          element: <UpdateBlog />,
         },
         {
           path: "/dashboard/feedback",

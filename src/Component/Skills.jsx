@@ -30,20 +30,23 @@ const skillsData = [
 
 const Skills = () => {
   const { data: skills, isLoading } = useGetAllSkillsQuery();
-    const [localSkills, setLocalSkills] = useState(skillsData);
-  
-    useEffect(() => {
-      if (skills) {
-        setLocalSkills(skills);
-      }
-    }, [skills]);
+  const [localSkills, setLocalSkills] = useState(skillsData);
+
+  useEffect(() => {
+    if (skills) {
+      setLocalSkills(skills);
+    }
+  }, [skills]);
   return (
     <div id="Skills" className="p-10">
-      <div className="text-center">
+      <div className="text-center  my-10">
         <h1 className="text-2xl md:text-4xl lg:text-5xl mb-4">My skills</h1>
-        <p className="text-2xl md:text-3xl lg:text-5xl text-[#FACC15]">
-          -----what I know ------
-        </p>
+
+        <div className="">
+          <span className="inline-block w-40 h-1 rounded-full bg-yellow-400"></span>
+          <span className="inline-block w-3 h-1 ml-1 rounded-full bg-yellow-400"></span>
+          <span className="inline-block w-1 h-1 ml-1 rounded-full bg-yellow-400"></span>
+        </div>
       </div>
 
       <div className="max-w-[800px] mx-auto">

@@ -22,7 +22,7 @@ const Banner = () => {
 
   return (
     <div id="home">
-      <div className="w-full bg-transparent p-5 h-screen max-h-[700px] flex flex-col-reverse md:flex-row items-center justify-center gap-28 md:gap-20">
+      <div className="w-full bg-transparent p-5 h-screen max-h-[700px] flex flex-col-reverse md:flex-row-reverse items-center justify-center gap-28 md:gap-20">
         <div className="md:w-1/2 space-y-8">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             HI, I&apos;M Asif!
