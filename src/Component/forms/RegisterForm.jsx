@@ -25,7 +25,7 @@ const RegisterForm = () => {
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/auth/register",
+        "https://asif-portfolio-server.vercel.app/api/v1/auth/register",
         {
           method: "POST",
           headers: {
