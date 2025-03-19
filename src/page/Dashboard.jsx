@@ -1,6 +1,6 @@
 import { CgLogOut } from "react-icons/cg";
 import { FiUsers } from "react-icons/fi";
-import { GiPush, GiSkills } from "react-icons/gi";
+import { GiPencil, GiPush, GiSkills } from "react-icons/gi";
 import { LuLayoutDashboard, LuPackage } from "react-icons/lu";
 import { RiMenu2Fill } from "react-icons/ri";
 
@@ -20,6 +20,7 @@ export const Dashboard = () => {
     { name: "Projects", href: "/dashboard/projects", icon: LuPackage },
     { name: "Skills", href: "/dashboard/skills", icon: GiSkills },
     { name: "Experience", href: "/dashboard/experience", icon: GiPush },
+    { name: "Blogs", href: "/dashboard/blogs", icon: GiPencil },
     { name: "Feedbacks", href: "/dashboard/feedback", icon: FiUsers },
     {
       name: "Settings",

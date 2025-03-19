@@ -37,6 +37,7 @@
     "redux": "^5.0.1",
     "redux-persist": "^6.0.0",
     "sort-by": "^1.2.0",
+    "suneditor-react": "^3.6.1",
     "swiper": "^11.0.5",
     "tsparticles": "^3.5.0"
   },

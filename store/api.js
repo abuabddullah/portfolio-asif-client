@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // Using dummy data instead of actual API calls for design only
 export const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://asif-portfolio-server.vercel.app/api/v1",
+    baseUrl: "http://localhost:5000/api/v1",
     prepareHeaders: (headers, { getState }) => {
       const token = getState().auth.token;
       if (token) {
@@ -12,7 +12,7 @@ export const api = createApi({
       return headers;
     },
   }),
-  tagTypes: ["Project", "Skill", "Experience"],
+  tagTypes: ["Project", "Skill", "Experience","Blog"],
   endpoints: (builder) => ({
     // Project
     getAllProjects: builder.query({
@@ -160,6 +160,53 @@ export const api = createApi({
       },
       invalidatesTags: ["Experience"],
     }),
+    //Blog
+    getAllBlogs: builder.query({
+      query: () => "/blogs",
+      transformResponse: (response) => {
+      return response.data;
+      },
+      providesTags: ["Blog"],
+    }),
+    addBlog: builder.mutation({
+      query: (data) => {
+
+      return {
+        url: "/blogs",
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+      },
+      invalidatesTags: ["Blog"],
+    }),
+    deleteBlog: builder.mutation({
+      query: (id) => ({
+      url: `/blogs/${id}`,
+      method: "DELETE",
+      }),
+      invalidatesTags: ["Blog"],
+    }),
+    getBlog: builder.query({
+      query: (id) => `/blogs/${id}`,
+      transformResponse: (response) => {
+      return response.data;
+      },
+      providesTags: ["Blog"],
+    }),
+    updateBlog: builder.mutation({
+      query: ({ id, ...formData }) => ({
+      url: `/blogs/${id}`,
+      method: "PATCH",
+      body: formData,
+      }),
+      transformResponse: (response) => {
+      return response.data;
+      },
+      invalidatesTags: ["Blog"],
+    }),
   }),
 });
 
@@ -179,4 +226,9 @@ export const {
   useGetAllExperiencesQuery,
   useGetExperienceQuery,
   useUpdateExperienceMutation,
+  useAddBlogMutation,
+  useDeleteBlogMutation,
+  useGetAllBlogsQuery,
+  useGetBlogQuery,
+  useUpdateBlogMutation,
 } = api;

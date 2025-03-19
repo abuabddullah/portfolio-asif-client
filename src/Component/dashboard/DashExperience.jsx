@@ -91,7 +91,7 @@ const DashExperience = () => {
         <div className="lg:col-span-1">
           <div className="bg-white shadow rounded-lg p-6">
             <h2 className="text-lg font-medium text-gray-900 mb-4">
-              Add New Project
+              Add New Experience
             </h2>
             <AddExperienceForm />
           </div>
